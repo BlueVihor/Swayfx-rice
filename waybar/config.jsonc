@@ -1,0 +1,52 @@
+{
+  "layer": "top",
+  "position": "top",
+  "reload_style_on_change": true,
+  "modules-left": ["sway/language", "network", "bluetooth", "battery"],
+  "modules-center": ["custom/logo", "custom/text"],
+  "modules-right": ["wireplumber", "clock", "custom/power"],
+        "custom/logo": {
+          "format": "󰣇"
+        },
+        "custom/text": {
+          "format": "rch Linux"
+        },
+        "custom/power": {
+          "format": " ",
+          "on-click": "~/.config/waybar/scripts/power-menu.sh"
+        },
+        "battery": {
+            "bat": "BAT0",
+            "format": " {capacity}%",
+            "format-charging": "{capacity}% charging",
+            "interval": 1,
+            "class": "power"
+        },
+        "wireplumber":{
+            "format":"{icon}  {volume}%",
+            "format-muted":"   {volume}%",
+            "format-icons":[" ", " ", " "],
+            "tooltip":false,
+            "on-click":"pavucontrol"
+
+
+        },
+        "clock": {
+            "format": "  {:%I:%M:%S %p}  ",
+            "interval": 1,
+            "tooltip":false
+        },
+        "network": {
+            "format": "  ",
+            "on-click": "kitty nmtui",
+            "tooltip":false
+        },
+        "bluetooth": {
+            "format-on": " ",
+            "on-click": "kitty bluetothctl",
+            "tooltip":false
+        },
+        "sway/language": {
+          "format": "{long}"
+        }
+}

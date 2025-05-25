@@ -1,0 +1,53 @@
+@define-color background rgba(18,25,31,0.91);
+@define-color foreground rgba(245, 245, 245, 0.4);
+@define-color font rgba(255,255,255,0.95);
+
+* {
+  font-size: 15px;
+  font-family:JetBrains Mono;
+}
+window#waybar{
+  all:unset;
+  background-color: @background;
+}
+
+.modules-left, .modules-center, .modules-right {
+    margin-top: 0px;
+    margin-bottom: -3px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: none; 
+}
+
+.modules-left {
+    padding:10px;
+}
+.modules-center {
+    padding:10px;
+    min-width: 150.5px;
+}
+.modules-right {
+    padding:10px;
+}
+
+#custom-text, #custom-power, #hyprland-language, #network, #bluetooth, #battery, #wireplumber, #clock{
+  padding: 0px 4px;
+  transition: all .3s ease;
+  color:@font;
+}
+#custom-logo{
+  font-size: 20px;
+  padding: 0px 0px;
+  margin-right: 4px;
+  color: @font;
+  
+}
+#language{
+  color: @font;
+}
+#custom-text{
+  margin-top: 6px;
+  margin-left: 0px;
+}
+
+
